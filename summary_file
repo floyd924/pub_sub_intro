@@ -1,0 +1,18 @@
+Okay as a quick recap:
+we need a file called helpers/pub_sub.js which has a publish and a subscribe function that we can call from the other files
+
+the other files must require in the pub_sub file in order to call these functions
+
+theses functions:
+ >> allow the file to ‘broadcast’ some info on a ‘channel’ with a unique name, for anything to listen to
+
+ >> and allow the file to ‘listen’ to the broadcasted frequency from wherever it comes from
+
+The two functions above are wrapped in a method called ‘bindEvents’ when referred to inside each file wishing to use them
+
+Each file’s ‘bindEvent’ methods must be called from the app.js file, in the main EventListener (within DOMContentLoaded)
+
+Each file must be required at the top of the app.js file, but the pub_sub file doesn’t need to be.
+
+
+And that’s it. Read over this tonight.
